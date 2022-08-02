@@ -32,9 +32,9 @@ func main() {
 	client := calculatorpb.NewCalculatorServiceClient(cc)
 
 	// log.Printf("service client %f", client)
-	callSum(client)
+	// callSum(client)
 	// callPND(client)
-	// callAverage(client)
+	callAverage(client)
 	// callFindMax(client)
 	// callSquareRoot(client, -4)
 	// callSumWithDeadline(client, 1*time.Second) // bi timeout
@@ -116,21 +116,24 @@ func callAverage(c calculatorpb.CalculatorServiceClient) {
 	}
 
 	listReq := []calculatorpb.AverageRequest{
-		calculatorpb.AverageRequest{
+		{
 			Num: 5,
 		},
-		calculatorpb.AverageRequest{
-			Num: 10,
+		{
+			Num: 5,
 		},
-		calculatorpb.AverageRequest{
-			Num: 12,
-		},
-		calculatorpb.AverageRequest{
-			Num: 3,
-		},
-		calculatorpb.AverageRequest{
-			Num: 4.2,
-		},
+		// {
+		// 	Num: 10,
+		// },
+		// {
+		// 	Num: 12,
+		// },
+		// {
+		// 	Num: 20,
+		// },
+		// {
+		// 	Num: 4.2,
+		// },
 	}
 
 	for _, req := range listReq {
@@ -161,19 +164,19 @@ func callFindMax(c calculatorpb.CalculatorServiceClient) {
 	go func() {
 		//gui nhieu request
 		listReq := []calculatorpb.FindMaxRequest{
-			calculatorpb.FindMaxRequest{
+			{
 				Num: 5,
 			},
-			calculatorpb.FindMaxRequest{
+			{
 				Num: 10,
 			},
-			calculatorpb.FindMaxRequest{
+			{
 				Num: 12,
 			},
-			calculatorpb.FindMaxRequest{
+			{
 				Num: 3,
 			},
-			calculatorpb.FindMaxRequest{
+			{
 				Num: 4,
 			},
 		}
