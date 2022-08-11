@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/datnd/learn/learn_grpc_datnd'
+protoc --go_out=. calc/*.proto
+protoc --go-grpc_out=. calc/*.proto
+make: Leaving directory '/home/datnd/learn/learn_grpc_datnd'
+ 

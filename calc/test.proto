@@ -1,9 +1,0 @@
-syntax = "proto3";
-
-package calc;
-
-option go_package = "learn_grpc_datnd/test";
-
-service TestService {
-    
-} 
